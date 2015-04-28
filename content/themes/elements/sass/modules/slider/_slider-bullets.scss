@@ -16,16 +16,16 @@
     
     i{
       display: block;
-      width: rem-calc(8);
-      height: rem-calc(8);
+      width: rem-calc(12);
+      height: rem-calc(12);
       border-radius: 50%;
       background: transparent;
-      border: thin solid $black;
+      border: rem-calc(2) solid $white;
     }
     
     &.is-active{
       i{
-        background-color: $black;
+        background-color: $white;
       }
     }
   }
