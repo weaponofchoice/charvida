@@ -54,7 +54,7 @@ $ ->
   ###
   trigger = $('.arrow-scroll')
   
-  trigger.css "top", hero_height - 60
+  trigger.css "top", hero_height - 80
   
   trigger.click ->
     $('html, body').animate({scrollTop: hero_height}, 500)
@@ -86,7 +86,7 @@ $ ->
     # Re-apply heights
     hero.css "height", hero_height
     hero_banner.css "height", hero_height
-    trigger.css "top", hero_height - 30
+    trigger.css "top", hero_height - 80
     
     wrapper = $('.is-stretched-wrapper')
     object = $('.is-stretched-object')

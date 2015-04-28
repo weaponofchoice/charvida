@@ -3,7 +3,7 @@
 function custom_login_logo() { ?>
     <style type="text/css">
         .login #login h1 a {
-            background-image: url( <?php echo home_url( 'content/themes/theme/img/logo.svg' , __FILE__ ); ?> );
+            background-image: url( <?php echo home_url( 'content/themes/elements/img/logo.svg' , __FILE__ ); ?> );
             background-size: 100%;
             background-position: center;
         }
