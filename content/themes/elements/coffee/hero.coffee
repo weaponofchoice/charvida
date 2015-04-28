@@ -54,10 +54,10 @@ $ ->
   ###
   trigger = $('.arrow-scroll')
   
-  trigger.css "top", hero_height - 30
+  trigger.css "top", hero_height - 60
   
   trigger.click ->
-    $('html, body').animate({scrollTop: hero_height + 20}, 500)
+    $('html, body').animate({scrollTop: hero_height}, 500)
     
   ###
     Fade effect

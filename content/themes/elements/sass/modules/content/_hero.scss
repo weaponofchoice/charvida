@@ -20,26 +20,22 @@
   position: absolute;
   width: 60px;
   height: 60px;
-  background: $white;
-  border-radius: 100%;
   left: 0;
   right: 0;
   margin: auto;
   z-index: $zIndex-arrow;
   
   img{
-    width: 30px;
-    top: 20px;
-    left: 15px;
+    width: 50px;
+    top: 0;
     position: absolute;
     z-index: $zIndex-arrow;
     @include transition( .3s );
-    @include transform( rotate(90deg) );
   }
   
   &:hover{
     img{
-      top: 25px;
+      top: 15px;
       @include transition( .3s );
     }
   }

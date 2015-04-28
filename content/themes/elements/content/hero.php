@@ -43,5 +43,5 @@ echo '<section class="section section_hero has_no-pad">';
   
 echo '</section>';
 
-// <a href="javascript:;" class="arrow arrow-scroll"><img src="<?php echo bloginfo( 'template_directory' ) . /img/arrow.svg"></a>
+echo '<a href="javascript:;" class="arrow arrow-scroll"><img src="' . get_template_directory_uri() . '/img/arrow.svg"></a>';
 ?>

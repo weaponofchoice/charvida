@@ -1679,30 +1679,22 @@ main .section:last-child {
   position: absolute;
   width: 60px;
   height: 60px;
-  background: white;
-  border-radius: 100%;
   left: 0;
   right: 0;
   margin: auto;
   z-index: 1100; }
   .arrow-scroll img {
-    width: 30px;
-    top: 20px;
-    left: 15px;
+    width: 50px;
+    top: 0;
     position: absolute;
     z-index: 1100;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s;
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
+    transition: 0.3s; }
   .arrow-scroll:hover img {
-    top: 25px;
+    top: 15px;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
