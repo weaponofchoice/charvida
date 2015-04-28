@@ -1656,7 +1656,6 @@ main .section:last-child {
     top: 50%;
     left: 50%;
     margin: auto;
-    position: absolute;
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);

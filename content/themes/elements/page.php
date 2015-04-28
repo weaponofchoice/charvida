@@ -1,8 +1,10 @@
 <?php
 get_header();
 
+$i_anchor = 1;
+
 // Loop into ACF groups
-if( have_rows('page') ): $i_anchor = 1; $i_par = 0;
+if( have_rows('page') ):  $i_par = 0;
   while( have_rows('page') ): the_row();
     
     // Hero section is placed before main

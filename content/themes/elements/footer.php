@@ -1,7 +1,8 @@
   </main>
   
+  <?php global $i_anchor; ?>
   <!-- Footer -->
-  <footer>
+  <footer <?php if( get_field('footer_o_menu', 'option') == true ): echo 'class="has-anchor" id="anchor-' . $i_anchor . '"'; endif; ?>>
     <?php
     $footer_hours_title = get_field( 'footer_hours_title', 'option' );
     $footer_hours_list = get_field( 'footer_hours_list', 'option' );

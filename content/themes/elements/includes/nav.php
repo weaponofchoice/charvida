@@ -46,6 +46,11 @@
         
       endwhile;
     endif;
+    
+    // Footer menu item
+    if( get_field('footer_o_menu', 'option') == true ):
+      echo '<li><a href="#anchor-' . $i_anchor . '">' . get_field( 'footer_o_menu_text', 'option' ) . '</a></li>';
+    endif;
     ?>
   </ul>
 </nav>
