@@ -1799,7 +1799,7 @@
 	}
 
 }(window, document));
-  var body, masonry, resizeTimer;
+  var masonry;
 
   $(function() {
     return Pace.on('done', function() {
@@ -1819,89 +1819,6 @@
       hero_height = window.innerHeight - 100;
       hero.css("height", hero_height);
       return hero_banner.css("height", hero_height);
-    });
-  });
-
-
-  /*
-    Theory:
-      This only works for an object which ratio is 2x1:
-      If wrapper's width is smaller than twice the height, then crop the sides. Else, crop the top and bottom.
-      
-      Wrapper's width = w
-      Wrapper's height = h
-      
-      w < (2 * h) = crop sides
-      w > (2 * h) = crop top & bottom
-    
-    Method:
-      1. Wrap your stretched object(usually an image) in a wrapper
-      2. Calculate wrapper's width & height(even if default is 100%)
-      3. Set object's min-height to wrapper's height
-      4. Set classes based on the theory shown above.
-   */
-
-  $(function() {
-
-    /*
-      First, give heights to the hero
-     */
-    var hero, hero_banner, hero_height, object, ratio, trigger, wrapper, wrapper_h, wrapper_w;
-    hero = $('.section_hero');
-    hero_banner = $('.section_hero-banner');
-    hero_height = window.innerHeight - 50;
-    hero.css("height", hero_height);
-    hero_banner.css("height", hero_height);
-
-    /*
-      Next, shape the stretched object
-     */
-    wrapper = $('.is-stretched-wrapper');
-    object = $('.is-stretched-object');
-    ratio = object.width() / object.height();
-    wrapper_w = wrapper.width();
-    wrapper_h = wrapper.height();
-    object.css("min-height", wrapper_h);
-    if (wrapper_w < wrapper_h * ratio) {
-      object.removeClass("is-stretched-wide");
-      object.addClass("is-stretched-high");
-    } else {
-      object.removeClass("is-stretched-high");
-      object.addClass("is-stretched-wide");
-    }
-
-    /*
-      Scroll animation
-     */
-    trigger = $('.arrow-scroll');
-    trigger.css("top", hero_height - 80);
-    trigger.click(function() {
-      return $('html, body').animate({
-        scrollTop: hero_height
-      }, 500);
-    });
-
-    /*
-      Recalculate when window is resized
-     */
-    return $(window).on('resize', function() {
-      hero_height = window.innerHeight - 50;
-      hero.css("height", hero_height);
-      hero_banner.css("height", hero_height);
-      trigger.css("top", hero_height - 80);
-      wrapper = $('.is-stretched-wrapper');
-      object = $('.is-stretched-object');
-      ratio = object.width() / object.height();
-      wrapper_w = wrapper.width();
-      wrapper_h = wrapper.height();
-      object.css("min-height", wrapper_h);
-      if (wrapper_w < wrapper_h * ratio) {
-        object.removeClass("is-stretched-wide");
-        return object.addClass("is-stretched-high");
-      } else {
-        object.removeClass("is-stretched-high");
-        return object.addClass("is-stretched-wide");
-      }
     });
   });
 
@@ -2018,21 +1935,6 @@
     }
   });
 
-  body = $('body');
-
-  resizeTimer = void 0;
-
-  $(window).resize(function() {
-    return body.addClass("is-loading");
-  });
-
-  $(window).on('resize', function(e) {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout((function() {
-      body.removeClass("is-loading");
-    }), 500);
-  });
-
   $(function() {
     $('a:has(div, img)').addClass("nope");
     $('a:has(h1):not(.nope)').addClass("link-h1");
@@ -2040,54 +1942,6 @@
     $('a:has(h3):not(.nope)').addClass("link-h3");
     $('a:has(p):not(.nope)').addClass("link-p");
     return $('a').removeClass("nope");
-  });
-
-  $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 100
-        }, 500);
-        return false;
-      }
-    }
-  });
-});
-
-  $(function() {
-    var close, menu_mobile, open;
-    menu_mobile = $('.menu_mobile');
-    open = $('.trigger-menuOpen');
-    close = $('.trigger-menuClose');
-    open.addClass("is_active");
-    open.click(function() {
-      menu_mobile.addClass("is_active");
-      open.removeClass("is_active");
-      return close.addClass("is_active");
-    });
-    close.click(function() {
-      menu_mobile.removeClass("is_active");
-      close.removeClass("is_active");
-      return open.addClass("is_active");
-    });
-    return $('.menu_mobile a').click(function() {
-      var delay;
-      delay = function(ms, func) {
-        return setTimeout(func, ms);
-      };
-      delay(500, function() {
-        return menu_mobile.removeClass("is_active");
-      });
-      delay(500, function() {
-        return close.removeClass("is_active");
-      });
-      return delay(500, function() {
-        return open.addClass("is_active");
-      });
-    });
   });
 
   if ($('.isotope').length > 0) {
