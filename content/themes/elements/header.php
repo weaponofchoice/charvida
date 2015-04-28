@@ -8,7 +8,7 @@
 <!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-  <title>YOUR SITE</title>
+  <title>Charvida</title>
   
   <!-- META TAGS -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -35,8 +35,16 @@
     </a>
     
     <?php include( 'includes/nav.php' ); ?>
-    
-    <!-- <a class="trigger trigger-menu"><i></i></a> -->
+  
+    <ul class="social">
+      <?php
+      $social_platforms = get_field( 'platforms', 'option' );
+  
+      foreach( $social_platforms as $platform ):
+        echo '<li><a href="' . $platform['link'] . '" target="_blank"><img src="' . get_template_directory_uri() . '/img/social/' . $platform['platform'] . '.svg"></a></li>';
+      endforeach;
+      ?>
+    </ul>
   </header>
   
   <?php

@@ -20,6 +20,7 @@ function menu_order( $menu_order ) {
     'edit.php', //Posts
     'edit.php?post_type=page', //Pages
     'footer', //Footer information
+    'social-media', //Social media platforms
     'separator-last',
     
     'edit.php?post_type=acf-field-group', //Custom fields

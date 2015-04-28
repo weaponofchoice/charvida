@@ -8,5 +8,12 @@ if( function_exists('acf_add_options_page') ){
     'menu_slug'   => 'footer',
     'redirect'    => false
   ));
+  
+  acf_add_options_page( array(
+    'page_title'  => 'Social Media',
+    'menu_title'  => 'Social Media',
+    'menu_slug'   => 'social-media',
+    'redirect'    => false
+  ));
 }
 ?>
