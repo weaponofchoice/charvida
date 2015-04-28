@@ -1432,7 +1432,9 @@ header {
 @media only screen and (max-width: 62.5em) {
   header nav,
   header .social {
-    display: none; } }
+    display: none; }
+  header .link-logo {
+    left: 30px; } }
 footer {
   z-index: 900;
   width: 100%;
@@ -1567,7 +1569,11 @@ a.trigger-menuClose {
 
 @media only screen and (max-width: 62.5em) {
   a.trigger-menu {
-    display: block; } }
+    display: block; }
+
+  .trigger-menuOpen,
+  .trigger-menuClose {
+    right: 30px; } }
 nav ul {
   display: inline; }
   nav ul li {
@@ -1611,7 +1617,7 @@ nav ul {
   left: 0;
   margin: auto;
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: auto;
   overflow: hidden; }
   .menu_mobile div nav {

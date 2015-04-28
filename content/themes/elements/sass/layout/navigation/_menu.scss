@@ -76,4 +76,9 @@ a.trigger-menuClose{
   a.trigger-menu{
     display: block;
   }
+  
+  .trigger-menuOpen,
+  .trigger-menuClose{
+    right: 30px;
+  }
 }
