@@ -1795,7 +1795,7 @@ main .section:last-child {
   height: 90vh;
   overflow: hidden; }
   .section_hero .section_hero-banner {
-    position: fixed;
+    position: absolute;
     overflow: hidden; }
   .section_hero .section_content {
     -moz-transform: translateY(-50%);
