@@ -44,3 +44,17 @@ header {
     }
   }
 }
+
+@media #{$medium-down}{
+  header{
+    nav,
+    .social{
+      display: none;
+    }
+    
+    .link-logo{
+      left: 30px;
+    }
+    
+  }
+}

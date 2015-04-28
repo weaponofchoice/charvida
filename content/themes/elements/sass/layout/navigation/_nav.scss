@@ -11,9 +11,62 @@ nav ul{
   }
 }
 
-// Current item
-nav ul{
-  li.anchor_current{
+// Mobile Navigation
+.menu_mobile{
+  @include hide( .3s );
+  
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: $zIndex-menuMobile;
+  
+  width: 100%;
+  height: 100%;
+  background: $white;
+  
+  &.is_active{
+    @include show( .3s );
+  }
+}
+
+.menu_mobile div{
+  @include transform( translateY(-50%) );
+  
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  
+  nav{
+    margin-bottom: 60px;
     
+    ul{
+      text-align: center;
+      
+      li{
+        display: block;
+        padding: 0;
+        margin-bottom: 1em;
+        
+        a{
+          @extend h2;
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
+  
+  .social{
+    display: block;
+    text-align: center;
+    
+    li{
+      display: inline-block;
+    }
   }
 }

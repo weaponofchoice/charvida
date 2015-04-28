@@ -1,8 +1,9 @@
 a.trigger-menu{
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: block;
   position: relative;
+  display: none;
   
   i{
     width: 100%;
@@ -22,42 +23,62 @@ a.trigger-menu{
     }
     
     &:before{
-      margin-top: -8px;
+      margin-top: -10px;
     }
     
     &:after{
-      margin-top: 8px;
+      margin-top: 10px;
     }
   }
 }
 
-a.trigger-menu:hover i{
-  &:before,
-  &:after{
-    transition: .2s;
-  }
+a.trigger-menuClose{
+  width: 30px;
+  height: 30px;
   
-  &:before{
-    margin-top: -11px;
-  }
-  
-  &:after{
-    margin-top: 11px;
+  i{
+    left: 50%;
+    position: absolute;
+    
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    
+    background: $black;
+    
+    &:first-child{
+      @include transform( rotate(45deg) );
+    }
+    
+    &:last-child{
+      @include transform( rotate(-45deg) );
+    }
   }
 }
 
-@keyframes activebefore{
-  50%{
-    margin-top: 0;
-  }
+// states
+.trigger-menuOpen,
+.trigger-menuClose{
+  @include hide( .3s );
   
-  100%{
-    @include transform( rotate(45deg) );
+  top: 0;
+  bottom: 0;
+  right: 60px;
+  margin: auto;
+  position: absolute !important;
+  
+  &.is_active{
+    @include show( .3s );
   }
 }
 
-a.trigger-menu:focus i{
-  &:before{
-    -webkit-animation: activebefore .4s linear;
+@media #{$medium-down}{
+  a.trigger-menu{
+    display: block;
+  }
+  
+  .trigger-menuOpen,
+  .trigger-menuClose{
+    right: 30px;
   }
 }
