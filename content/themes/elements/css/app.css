@@ -1440,7 +1440,7 @@ footer {
 
 .footer_top,
 .footer_bottom {
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: auto; }
 
 .footer_top {
@@ -1507,6 +1507,10 @@ nav ul {
     padding-right: 50px; }
     nav ul li a {
       text-decoration: none; }
+
+.section_slider .section_content {
+  max-width: 1200px;
+  margin: auto; }
 
 .slider {
   position: relative; }
@@ -1666,14 +1670,14 @@ main .section:last-child {
     position: fixed;
     overflow: hidden; }
   .section_hero .section_content {
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     top: 50%;
-    left: 50%;
-    margin: auto;
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    max-width: 62.5rem;
+    margin: auto; }
 
 .arrow-scroll {
   position: absolute;

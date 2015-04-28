@@ -16,7 +16,7 @@ footer{
 // Footer content
 .footer_top,
 .footer_bottom{
-  max-width: 1000px;
+  max-width: rem-calc(1000);
   margin: auto;
 }
 
