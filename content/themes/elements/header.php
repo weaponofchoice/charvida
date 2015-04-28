@@ -39,13 +39,33 @@
     <ul class="social">
       <?php
       $social_platforms = get_field( 'platforms', 'option' );
-  
+      
       foreach( $social_platforms as $platform ):
         echo '<li><a href="' . $platform['link'] . '" target="_blank"><img src="' . get_template_directory_uri() . '/img/social/' . $platform['platform'] . '.svg"></a></li>';
       endforeach;
       ?>
     </ul>
+    
+    <a class="trigger-menu trigger-menuOpen"><i></i></a>
+    <a class="trigger-menuClose"><i></i><i></i></a>
   </header>
+  
+  <!-- Mobile Nav -->
+  <div class="menu_mobile">
+    <div>
+      <?php include( 'includes/nav.php' ); ?>
+      
+      <ul class="social">
+        <?php
+        $social_platforms = get_field( 'platforms', 'option' );
+      
+        foreach( $social_platforms as $platform ):
+          echo '<li><a href="' . $platform['link'] . '" target="_blank"><img src="' . get_template_directory_uri() . '/img/social/' . $platform['platform'] . '.svg"></a></li>';
+        endforeach;
+        ?>
+      </ul>
+    </div>
+  </div>
   
   <?php
   // Hero section must be placed before main

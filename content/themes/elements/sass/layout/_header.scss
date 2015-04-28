@@ -44,3 +44,12 @@ header {
     }
   }
 }
+
+@media #{$medium-down}{
+  header{
+    nav,
+    .social{
+      display: none;
+    }
+  }
+}

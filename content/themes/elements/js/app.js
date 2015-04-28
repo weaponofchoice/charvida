@@ -2063,6 +2063,39 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
   });
 });
 
+  $(function() {
+    var close, menu_mobile, open;
+    menu_mobile = $('.menu_mobile');
+    open = $('.trigger-menuOpen');
+    close = $('.trigger-menuClose');
+    open.addClass("is_active");
+    open.click(function() {
+      menu_mobile.addClass("is_active");
+      open.removeClass("is_active");
+      return close.addClass("is_active");
+    });
+    close.click(function() {
+      menu_mobile.removeClass("is_active");
+      close.removeClass("is_active");
+      return open.addClass("is_active");
+    });
+    return $('.menu_mobile a').click(function() {
+      var delay;
+      delay = function(ms, func) {
+        return setTimeout(func, ms);
+      };
+      delay(500, function() {
+        return menu_mobile.removeClass("is_active");
+      });
+      delay(500, function() {
+        return close.removeClass("is_active");
+      });
+      return delay(500, function() {
+        return open.addClass("is_active");
+      });
+    });
+  });
+
   if ($('.isotope').length > 0) {
     masonry = $('.isotope_masonry');
     $('main').imagesLoaded(function() {
