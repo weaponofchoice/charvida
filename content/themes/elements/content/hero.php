@@ -30,7 +30,7 @@ echo '<section class="section section_hero has_no-pad">';
       
       // Title
       if( $hero_c_title ):
-        echo '<h2 class="is_bold is_' . $hero_o_c_textColor . '">' . $hero_c_title . '</h2>';
+        echo '<h1 class="is_bold is_aligned-center is_' . $hero_o_c_textColor . '">' . $hero_c_title . '</h1>';
       endif;
       
       // Text

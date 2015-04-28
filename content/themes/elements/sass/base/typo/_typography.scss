@@ -7,24 +7,31 @@
 
 h1{
   @extend %base;
-  font-size: 3em;
+  font-size: rem-calc(70);
+  line-height: 1;
 }
 
 h2{
   @extend h1;
-  font-size: 2em;
+  font-size: rem-calc(40);
+  line-height: rem-calc(48);
 }
 
 p{
   @extend %base;
+  font-size: rem-calc(18);
 }
 
 a{
   @extend %base;
+  font-size: rem-calc(21);
   
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
+  color: $black;
+  
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
   
   &.link-h1,
   &.link-h2,

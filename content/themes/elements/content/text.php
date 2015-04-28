@@ -11,7 +11,7 @@ $text_c_text = preg_replace( '/<p>/', '<p class="is_aligned-' . $text_o_c_align 
 ?>
 <section class="section section_text <?php if( $text_o_menu == true ){ echo 'has_anchor" id="anchor-' . $i_anchor; } else { echo '"'; }; ?>">
   <div class="section_content row <?php echo 'is_positioned-' . $text_o_c_pos; ?>">
-    <h2 class="s-4 columns is_uppercase is_bold <?php echo 'is_aligned-' . $text_o_c_align; ?>">
+    <h2 class="s-4 columns is_bold <?php echo 'is_aligned-' . $text_o_c_align; ?>">
       <?php echo $text_c_title; ?>
     </h2>
     <div class="s-4 columns">
