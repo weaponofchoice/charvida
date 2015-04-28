@@ -16,8 +16,12 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
   
-  <!-- LINK tags -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/app.css">
+  
+  <!-- Fonts from Typekit -->
+  <script src="//use.typekit.net/vwd6jyv.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
   
   <!-- WP_HEAD() -->
   <?php wp_head(); ?>
