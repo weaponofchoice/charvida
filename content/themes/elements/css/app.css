@@ -45,7 +45,7 @@
       clear: none; }
     .s-grid-4 > li:nth-of-type(4n+1) {
       clear: both; } }
-@media only screen and (min-width: 31.313em) {
+@media only screen and (min-width: 53.1875em) {
   .m-grid-1 > li {
     width: 100%;
     padding: 0 0.9375rem; }
@@ -315,7 +315,7 @@
   .column.s-uncentered.opposite,
   .columns.s-uncentered.opposite {
     float: right !important; } }
-@media only screen and (min-width: 31.313em) {
+@media only screen and (min-width: 53.1875em) {
   .m-push-1 {
     position: relative;
     left: 25%;
@@ -1339,7 +1339,8 @@ h2 {
   line-height: 3rem; }
 
 p {
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  line-height: 1.5625rem; }
 
 a {
   font-size: 1.3125rem;
@@ -1365,7 +1366,7 @@ footer {
   padding-left: 2.8125rem;
   padding-right: 2.8125rem; }
 
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 53.125em) {
   header {
     padding-left: 1.875rem;
     padding-right: 1.875rem; }
@@ -1435,29 +1436,60 @@ footer {
   overflow: hidden;
   padding: 25px;
   background: #ebceaf; }
+  footer .footer_inner {
+    max-width: 62.5rem;
+    margin: auto; }
   footer img {
-    max-width: 100px; }
+    width: 100px; }
 
-.footer_top,
-.footer_bottom {
-  max-width: 62.5rem;
-  margin: auto; }
+.footer_content {
+  float: left; }
+  .footer_content .footer_top {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: thin solid black; }
+  .footer_content:first-child {
+    width: 50%; }
+    .footer_content:first-child .footer_top {
+      padding-top: 1.5625rem; }
+  .footer_content:nth-last-child(2) {
+    width: 25%; }
+  .footer_content:last-child {
+    width: 25%; }
+    .footer_content:last-child > * {
+      width: calc(100% - 50px);
+      padding-left: 50px; }
 
-.footer_top {
-  padding-bottom: 10px;
-  border-bottom: thin solid black; }
-
-.footer_bottom {
-  padding-top: 10px; }
-  .footer_bottom ul li {
-    width: 100%;
-    height: auto;
-    overflow: hidden; }
-    .footer_bottom ul li p:first-child {
-      float: left; }
-    .footer_bottom ul li p:last-child {
+.footer_content ul li {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  .footer_content ul li p {
+    display: inline-block; }
+    .footer_content ul li p:last-child {
       float: right; }
 
+@media screen and (max-width: 1000px) {
+  footer .footer_content:first-child {
+    width: 40%; }
+  footer .footer_content:nth-last-child(2) {
+    width: 30%; }
+  footer .footer_content:last-child {
+    width: 30%; } }
+@media only screen and (max-width: 62.5em) {
+  footer .footer_content:first-child {
+    display: none; }
+  footer .footer_content:nth-last-child(2), footer .footer_content:last-child {
+    width: 50%; }
+    footer .footer_content:nth-last-child(2) > *, footer .footer_content:last-child > * {
+      width: 100%; } }
+@media screen and (max-width: 600px) {
+  footer .footer_content:nth-last-child(2) {
+    margin-bottom: 50px; }
+  footer .footer_content:nth-last-child(2), footer .footer_content:last-child {
+    width: 100%; }
+    footer .footer_content:nth-last-child(2) > *, footer .footer_content:last-child > * {
+      padding-left: 0; } }
 a.trigger-menu {
   width: 35px;
   height: 35px;
@@ -1509,7 +1541,7 @@ nav ul {
       text-decoration: none; }
 
 .section_slider .section_content {
-  max-width: 1200px;
+  max-width: 103.125rem;
   margin: auto; }
 
 .slider {
@@ -1744,7 +1776,7 @@ body.is-mobile .section-hero .section-hero-banner {
 
   .l-grid-1 li:nth-last-child(-n + 1) {
     margin-bottom: 0; } }
-@media only screen and (min-width: 31.313em) and (max-width: 62.5em) {
+@media only screen and (min-width: 53.1875em) and (max-width: 62.5em) {
   .m-grid-4 li:nth-last-child(-n + 4) {
     margin-bottom: 0; }
 
@@ -1756,7 +1788,7 @@ body.is-mobile .section-hero .section-hero-banner {
 
   .m-grid-1 li:nth-last-child(-n + 1) {
     margin-bottom: 0; } }
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 53.125em) {
   .s-grid-4 li:nth-last-child(-n + 4) {
     margin-bottom: 0; }
 
@@ -2123,6 +2155,6 @@ body.is-mobile.is-loading > * {
   width: calc(100% + (3.75rem * 2));
   margin-left: -3.75rem; }
 
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 53.125em) {
   .is-fullwidth {
     margin-left: -1.875rem; } }

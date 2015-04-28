@@ -33,13 +33,12 @@ $side-margin-small: rem-calc(30);
 // Space between content sections
 $section-spacing: rem-calc(60);
 
-
 // 
 // Media Query Ranges
 //
 
-$small-range: (0em, 31.250em);//0 - 500
-$medium-range: (31.313em, 62.5em);//501 - 1000
+$small-range: (0em, 53.125em);//0 - 850
+$medium-range: (53.1875em, 62.5em);//851 - 1000
 $large-range: (62.563em, 87.438em);//1001 - 1399
 $xlarge-range: (87.500em, 119.938em);//1400 - 1919
 $xxlarge-range: (120em);//1920 - beyond

@@ -1,7 +1,7 @@
 $ratio: (1 / 2) * 100%; // 2:1
 
 .section_slider .section_content{
-  max-width: 1200px;
+  max-width: rem-calc(1650);
   margin: auto;
 }
 

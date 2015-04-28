@@ -20,6 +20,7 @@ h2{
 p{
   @extend %base;
   font-size: rem-calc(18);
+  line-height: rem-calc(25);
 }
 
 a{
