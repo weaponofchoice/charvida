@@ -1799,7 +1799,7 @@
 	}
 
 }(window, document));
-  var masonry;
+  var body, masonry, resizeTimer;
 
   $(function() {
     return Pace.on('done', function() {
@@ -2016,6 +2016,21 @@
     } else {
 
     }
+  });
+
+  body = $('body');
+
+  resizeTimer = void 0;
+
+  $(window).resize(function() {
+    return body.addClass("is-loading");
+  });
+
+  $(window).on('resize', function(e) {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout((function() {
+      body.removeClass("is-loading");
+    }), 500);
   });
 
   $(function() {

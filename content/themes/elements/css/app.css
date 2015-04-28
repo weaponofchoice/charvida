@@ -1463,7 +1463,7 @@ footer {
   .footer_content:last-child {
     width: 25%; }
     .footer_content:last-child > * {
-      width: calc(100% - 50px);
+      width: 100%;
       padding-left: 50px; }
 
 .footer_content ul li {
