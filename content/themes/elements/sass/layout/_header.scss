@@ -16,11 +16,13 @@ header {
   
   .link-logo {
     top: 15px;
+    bottom: 15px;
     left: 60px;
+    margin: auto;
     position: absolute;
     
     width: auto;
-    height: calc(100% - 30px);
+    height: calc(60% - 30px);
     
     img{
       height: 100%;
@@ -56,5 +58,12 @@ header {
       left: 30px;
     }
     
+  }
+}
+
+@media #{$small-only}{
+  header .link-logo{
+    width: 50%;
+    height: auto;
   }
 }

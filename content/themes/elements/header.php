@@ -31,7 +31,7 @@
   <!-- Header -->
   <header>
     <a class="link-logo" href="<?php echo home_url(); ?>">
-      <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo.svg">
+      <img src="<?php echo bloginfo( 'template_directory' ); ?>/img/logo-type.svg">
     </a>
     
     <?php include( 'includes/nav.php' ); ?>
