@@ -1412,10 +1412,12 @@ header {
   background: white; }
   header .link-logo {
     top: 15px;
+    bottom: 15px;
     left: 60px;
+    margin: auto;
     position: absolute;
     width: auto;
-    height: calc(100% - 30px); }
+    height: calc(60% - 30px); }
     header .link-logo img {
       height: 100%; }
 
