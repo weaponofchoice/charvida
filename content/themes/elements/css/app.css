@@ -2265,9 +2265,18 @@ body.is-loading {
     -o-transition: 0s;
     transition: 0s; }
 
-body.is-mobile.is-loading > * {
+body.is_mobile.is-loading > * {
   opacity: 1;
   visibility: visible;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s; }
+
+body.is_mobile.is-loading .menu_mobile {
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: 0s;
   -moz-transition: 0s;
   -ms-transition: 0s;

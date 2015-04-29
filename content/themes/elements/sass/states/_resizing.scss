@@ -15,6 +15,10 @@ body.is-loading{
   }
 }
 
-body.is-mobile.is-loading > *{
+body.is_mobile.is-loading > *{
   @include show( 0s );
+}
+
+body.is_mobile.is-loading .menu_mobile{
+  @include hide( 0s );
 }
