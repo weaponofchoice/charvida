@@ -60,3 +60,10 @@ header {
     
   }
 }
+
+@media #{$small-only}{
+  header .link-logo{
+    width: 50%;
+    height: auto;
+  }
+}
