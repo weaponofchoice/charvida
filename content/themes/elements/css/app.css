@@ -1440,11 +1440,8 @@ footer {
   width: 100%;
   height: auto;
   overflow: hidden;
-  padding: 25px;
+  padding: 25px 60px;
   background: #ebceaf; }
-  footer .footer_inner {
-    max-width: 62.5rem;
-    margin: auto; }
   footer img {
     width: 100px; }
 
@@ -1483,6 +1480,9 @@ footer {
   footer .footer_content:last-child {
     width: 30%; } }
 @media only screen and (max-width: 62.5em) {
+  footer {
+    padding: 25px 30px; }
+
   footer .footer_content:first-child {
     display: none; }
   footer .footer_content:nth-last-child(2), footer .footer_content:last-child {
