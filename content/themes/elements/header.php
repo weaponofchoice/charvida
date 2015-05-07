@@ -29,8 +29,10 @@
 
 <?php
 $detect = new Mobile_Detect;
-if( $detect->isMobile() || isTablet() ){
+if( $detect->isMobile() ){
   $body_class = 'is_mobile';
+} elseif( $detect->isTablet() ){
+  $body_class = 'is_mobile is_tablet';
 }
 ?>
 
